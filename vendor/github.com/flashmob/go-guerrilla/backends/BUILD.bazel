@@ -1,0 +1,30 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "backend.go",
+        "decorate.go",
+        "gateway.go",
+        "p_compressor.go",
+        "p_debugger.go",
+        "p_guerrilla_db_redis.go",
+        "p_hasher.go",
+        "p_header.go",
+        "p_headers_parser.go",
+        "p_redis.go",
+        "p_sql.go",
+        "processor.go",
+        "redis_generic.go",
+        "util.go",
+        "validate.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/flashmob/go-guerrilla/backends",
+    importpath = "github.com/flashmob/go-guerrilla/backends",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/github.com/flashmob/go-guerrilla/log:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/mail:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/response:go_default_library",
+    ],
+)

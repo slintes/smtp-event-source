@@ -1,0 +1,28 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "boundary.go",
+        "builder.go",
+        "detect.go",
+        "encode.go",
+        "enmime.go",
+        "envelope.go",
+        "error.go",
+        "header.go",
+        "inspect.go",
+        "match.go",
+        "part.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/jhillyerd/enmime",
+    importpath = "github.com/jhillyerd/enmime",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/github.com/gogs/chardet:go_default_library",
+        "//vendor/github.com/jaytaylor/html2text:go_default_library",
+        "//vendor/github.com/jhillyerd/enmime/internal/coding:go_default_library",
+        "//vendor/github.com/jhillyerd/enmime/internal/stringutil:go_default_library",
+        "//vendor/github.com/pkg/errors:go_default_library",
+    ],
+)

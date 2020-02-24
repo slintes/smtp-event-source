@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["webhook.go"],
+    importpath = "github.com/slintes/smtpServer/internal/event",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//internal/config:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/backends:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/mail:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/response:go_default_library",
+        "//vendor/github.com/jhillyerd/enmime:go_default_library",
+        "//vendor/golang.org/x/net/html/charset:go_default_library",
+    ],
+)

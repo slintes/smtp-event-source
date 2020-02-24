@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "2022.go",
+        "detector.go",
+        "multi_byte.go",
+        "recognizer.go",
+        "single_byte.go",
+        "unicode.go",
+        "utf8.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/gogs/chardet",
+    importpath = "github.com/gogs/chardet",
+    visibility = ["//visibility:public"],
+)

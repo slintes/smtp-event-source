@@ -1,0 +1,38 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/slintes/smtpServer
+gazelle(name = "gazelle")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["main.go"],
+    importpath = "github.com/slintes/smtpServer",
+    visibility = ["//visibility:private"],
+    deps = ["//cmd:go_default_library"],
+)
+
+load("@io_bazel_rules_docker//container:image.bzl", "container_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_push")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+
+go_image(
+    name = "smtpServerImage",
+    embed = [":go_default_library"],
+    visibility = ["//visibility:public"],
+)
+
+container_push(
+    name = "push_smtpServer",
+    image = ":smtpServerImage",
+    format = "Docker",
+    registry = "index.docker.io",
+    repository = "slintes/smtp-server",
+    tag = "latest",
+)
+
+go_binary(
+    name = "smtpServer",
+    embed = [":go_default_library"],
+    visibility = ["//visibility:public"],
+)

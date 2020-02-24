@@ -1,0 +1,60 @@
+# github.com/asaskevich/EventBus v0.0.0-20180315140547-d46933a94f05
+github.com/asaskevich/EventBus
+# github.com/flashmob/go-guerrilla v1.6.1
+github.com/flashmob/go-guerrilla
+github.com/flashmob/go-guerrilla/backends
+github.com/flashmob/go-guerrilla/log
+github.com/flashmob/go-guerrilla/mail
+github.com/flashmob/go-guerrilla/mail/rfc5321
+github.com/flashmob/go-guerrilla/response
+# github.com/gogs/chardet v0.0.0-20150115103509-2404f7772561
+github.com/gogs/chardet
+# github.com/inconshreveable/mousetrap v1.0.0
+github.com/inconshreveable/mousetrap
+# github.com/jaytaylor/html2text v0.0.0-20190408195923-01ec452cbe43
+github.com/jaytaylor/html2text
+# github.com/jhillyerd/enmime v0.7.0
+github.com/jhillyerd/enmime
+github.com/jhillyerd/enmime/internal/coding
+github.com/jhillyerd/enmime/internal/stringutil
+# github.com/konsorten/go-windows-terminal-sequences v1.0.1
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/mattn/go-runewidth v0.0.4
+github.com/mattn/go-runewidth
+# github.com/olekukonko/tablewriter v0.0.1
+github.com/olekukonko/tablewriter
+# github.com/pkg/errors v0.8.1
+github.com/pkg/errors
+# github.com/sirupsen/logrus v1.4.2
+github.com/sirupsen/logrus
+# github.com/spf13/cobra v0.0.6
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.3
+github.com/spf13/pflag
+# github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf
+github.com/ssor/bom
+# golang.org/x/net v0.0.0-20190724013045-ca1201d0de80
+golang.org/x/net/html
+golang.org/x/net/html/atom
+golang.org/x/net/html/charset
+# golang.org/x/sys v0.0.0-20190422165155-953cdadca894
+golang.org/x/sys/unix
+# golang.org/x/text v0.3.2
+golang.org/x/text/encoding
+golang.org/x/text/encoding/charmap
+golang.org/x/text/encoding/htmlindex
+golang.org/x/text/encoding/internal
+golang.org/x/text/encoding/internal/identifier
+golang.org/x/text/encoding/japanese
+golang.org/x/text/encoding/korean
+golang.org/x/text/encoding/simplifiedchinese
+golang.org/x/text/encoding/traditionalchinese
+golang.org/x/text/encoding/unicode
+golang.org/x/text/internal/language
+golang.org/x/text/internal/language/compact
+golang.org/x/text/internal/tag
+golang.org/x/text/internal/utf8internal
+golang.org/x/text/language
+golang.org/x/text/runes
+golang.org/x/text/transform
+golang.org/x/text/unicode/norm

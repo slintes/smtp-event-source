@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "receivers.go",
+        "server.go",
+    ],
+    importpath = "github.com/slintes/smtpServer/internal/smtp",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//internal/config:go_default_library",
+        "//internal/event:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/backends:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/mail:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/response:go_default_library",
+    ],
+)

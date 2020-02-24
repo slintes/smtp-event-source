@@ -1,0 +1,18 @@
+language: go
+sudo: false
+
+env:
+  global:
+    - GO111MODULE=on
+
+before_script:
+  - go get github.com/mattn/goveralls
+  - go get golang.org/x/lint/golint
+
+after_success:
+  - if [[ "$TRAVIS_GO_VERSION" == 1.11.* ]]; then $HOME/gopath/bin/goveralls -service=travis-ci; fi
+
+go:
+  - "1.11.x"
+  - "1.12.x"
+  - "1.13.x"

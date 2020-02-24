@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "addr.go",
+        "unicode.go",
+        "uuid.go",
+        "wrap.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/jhillyerd/enmime/internal/stringutil",
+    importpath = "github.com/jhillyerd/enmime/internal/stringutil",
+    visibility = ["//vendor/github.com/jhillyerd/enmime:__subpackages__"],
+    deps = [
+        "//vendor/golang.org/x/text/runes:go_default_library",
+        "//vendor/golang.org/x/text/transform:go_default_library",
+        "//vendor/golang.org/x/text/unicode/norm:go_default_library",
+    ],
+)

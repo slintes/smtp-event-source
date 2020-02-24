@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "enhanced.go",
+        "quote.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/flashmob/go-guerrilla/response",
+    importpath = "github.com/flashmob/go-guerrilla/response",
+    visibility = ["//visibility:public"],
+)

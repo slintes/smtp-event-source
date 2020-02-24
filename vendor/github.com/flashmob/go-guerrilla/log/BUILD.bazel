@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "hook.go",
+        "log.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/flashmob/go-guerrilla/log",
+    importpath = "github.com/flashmob/go-guerrilla/log",
+    visibility = ["//visibility:public"],
+    deps = ["//vendor/github.com/sirupsen/logrus:go_default_library"],
+)

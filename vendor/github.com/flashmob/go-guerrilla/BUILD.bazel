@@ -1,0 +1,33 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "api.go",
+        "client.go",
+        "config.go",
+        "event.go",
+        "guerrilla.go",
+        "guerrilla_notunix.go",
+        "guerrilla_unix.go",
+        "models.go",
+        "pool.go",
+        "server.go",
+        "tls_go1.13.go",
+        "tls_go1.14.go",
+        "tls_go1.8.go",
+        "version.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/flashmob/go-guerrilla",
+    importpath = "github.com/flashmob/go-guerrilla",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/github.com/asaskevich/EventBus:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/backends:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/log:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/mail:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/mail/rfc5321:go_default_library",
+        "//vendor/github.com/flashmob/go-guerrilla/response:go_default_library",
+        "//vendor/github.com/sirupsen/logrus:go_default_library",
+    ],
+)

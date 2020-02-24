@@ -1,0 +1,24 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "base64.go",
+        "charsets.go",
+        "idheader.go",
+        "quotedprint.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/jhillyerd/enmime/internal/coding",
+    importpath = "github.com/jhillyerd/enmime/internal/coding",
+    visibility = ["//vendor/github.com/jhillyerd/enmime:__subpackages__"],
+    deps = [
+        "//vendor/golang.org/x/text/encoding:go_default_library",
+        "//vendor/golang.org/x/text/encoding/charmap:go_default_library",
+        "//vendor/golang.org/x/text/encoding/japanese:go_default_library",
+        "//vendor/golang.org/x/text/encoding/korean:go_default_library",
+        "//vendor/golang.org/x/text/encoding/simplifiedchinese:go_default_library",
+        "//vendor/golang.org/x/text/encoding/traditionalchinese:go_default_library",
+        "//vendor/golang.org/x/text/encoding/unicode:go_default_library",
+        "//vendor/golang.org/x/text/transform:go_default_library",
+    ],
+)

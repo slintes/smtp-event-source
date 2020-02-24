@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "client.go",
+        "event_bus.go",
+        "network_bus.go",
+        "server.go",
+    ],
+    importmap = "github.com/slintes/smtpServer/vendor/github.com/asaskevich/EventBus",
+    importpath = "github.com/asaskevich/EventBus",
+    visibility = ["//visibility:public"],
+)
